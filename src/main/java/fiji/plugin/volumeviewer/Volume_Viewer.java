@@ -75,7 +75,9 @@ public final class Volume_Viewer implements PlugIn {
 		//new ImageJ(); // open the ImageJ window to see images and results
 		
 		Volume_Viewer vv = new Volume_Viewer();
-		IJ.open(volumePath);
+//		IJ.open(Prefs.getImagesURL() + "t1-head.tif");
+		ImagePlus imp = IJ.openImage("http://wsr.imagej.net/images/t1-head.zip");
+		imp.show();
 		vv.run("");
 	}
 
